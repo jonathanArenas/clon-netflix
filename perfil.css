@@ -1,0 +1,53 @@
+body{
+    margin:auto;
+	background: #141414;
+}
+
+.banner{
+    position: relative;
+
+}
+
+
+.banner header{
+    top: 0px;
+    position:fixed;
+    width: 100%;
+    background: transparent;
+    z-index: 1;
+}
+
+
+.banner header nav{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+
+.banner header img{
+    margin-left:4vw;
+	width: 90px;
+}
+
+.banner header ul li{
+    display: inline-block;
+    padding-right: 15px;
+    font-size: 14px;
+}
+
+header a{
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner .imagen{
+    background-image: url("img/pelicula-principal.webp");
+    position: relative;
+    min-height: 700px;
+    background-size: cover;
+    z-index: 0;
+}
+
+
