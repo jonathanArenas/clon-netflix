@@ -1,49 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="css/perfil.css">
     <title>Página de inicio - Netflix</title>
 </head>
-<body>
-    <div class="banner">
-        <header id="mynav">
-            <nav>
-                <a href=""><img src="img/netflix.png" alt="logo"></a>
-                <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Series</a></li>
-                    <li><a href="">Peliculas</a></li>
-                    <li><a href="">Novedades populares</a></li>
-                    <li><a href="">Mi lista</a></li>
-                    <li><a href="">Audio y subtítulos</a></li>
-                </ul>
-                <div class="secondary-navigation">
-                    <div class="nav-element"></div>
-                    <div class="nav-element"></div>
-                    <div class="nav-element"></div>
-                </div>
-            </nav>
-        </header> 
-        <div class="imagen">
-                <img src="img/img-title-movie.webp" alt="">
-        </div>
-    </div>
-    <div class="contenedor-peliculas-recomendadas">
-        <div class="contenedor-titulo">
-            <h3>Peliculas recomendadas</h3>
-        </div>
-        <div class="contenedor-carousel">
-            <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
 
-            <div class="contenedor-imagenes-carousel">
-                    
+<body>
+    <header id="header">
+        <nav>
+            <a href="perfil.html"><img class="logo" src="img/netflix.png" alt="logo"></a>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Series</a></li>
+                <li><a href="">Peliculas</a></li>
+                <li><a href="">Novedades populares</a></li>
+                <li><a href="">Mi lista</a></li>
+                <li><a href="">Audio y subtítulos</a></li>
+            </ul>
+            <div class="secondary-navigation">
+                <div class="nav-element">
+                    <button class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="nav-element">
+                    <button class="notifications">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+                </div>
+                <div class="nav-element">
+                    <div class="perfil-box">
+                        <img src="img/user-1.jpg" alt="">
+                        <span><i class="fa-solid fa-caret-down"></i></span>
+                    </div>
+                </div>
             </div>
-            <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+        </nav>
+    </header>
+    <div class="pelicula-principal">
+        <div class="contenedor">
+            <img class="title-pelicula-principal" src="img/img-title-movie.webp" alt="">
+            <p class="descripcion">
+                Él se hacía pasar por magnate con una cida de lujo y
+                seducía a mujeres por internet para robarles millones de dólares.
+                Ahora algunas víctimas planean vengarse.
+            </p>
+            <button role="button" class="boton izquierda"><i class="fas fa-play"></i>Reproducir</button>
+            <button role="button" class="boton derecha"><i class="fas fa-info-circle"></i>Más información</button>
         </div>
     </div>
-    <script src="myscript.js"></script>
+    <div id="content-media">
+        <div class="contenedor-peliculas">
+            <div class="contenedor-titulo-indicadores">
+                <h3>Tendencia</h3>
+                <div class="indicadores">
+                </div>
+            </div>
+            <div class="contenedor-principal">
+                <button role="button" id="i-1" class="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
+                <div class="contenedor-carousel">
+                    <div class="carousel">
+                        <div class="pelicula">
+                            <a href="#"><img src="img/tendencia1.png" alt="comedia1"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/tendencia2.png" alt="comedia2"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/tendencia3.png" alt="comedia3"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/tendencia4.png" alt="comedia4"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/tendencia5.png" alt="comedia5"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/tendencia6.png" alt="comedia6"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/tendencia7.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/tendencia8.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/tendencia9.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <button role="button" id="d-1" class="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
+        <div class="contenedor-peliculas">
+            <div class="contenedor-titulo-indicadores">
+                <h3>Comedia</h3>
+                <div class="indicadores">
+                </div>
+            </div>
+            <div class="contenedor-principal">
+                <button role="button" id="i-2" class="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
+                <div class="contenedor-carousel">
+                    <div class="carousel">
+                        <div class="pelicula">
+                            <a href="#"><img src="img/comedia1.png" alt="comedia1"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/comedia2.png" alt="comedia2"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/comedia3.png" alt="comedia3"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/comedia4.png" alt="comedia4"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/comedia5.png" alt="comedia5"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/comedia6.png" alt="comedia6"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/comedia7.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/comedia8.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/comedia9.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <button role="button" id="d-2" class="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
+        <div class="contenedor-peliculas">
+            <div class="contenedor-titulo-indicadores">
+                <h3>Populares</h3>
+                <div class="indicadores">
+                </div>
+            </div>
+            <div class="contenedor-principal">
+                <button role="button" id="i-3" class="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
+                <div class="contenedor-carousel">
+                    <div class="carousel">
+                        <div class="pelicula">
+                            <a href="#"><img src="img/populares1.png" alt="comedia1"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/populares2.png" alt="comedia2"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/populares3.png" alt="comedia3"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/populares4.png" alt="comedia4"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/populares5.png" alt="comedia5"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/populares6.png" alt="comedia6"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/populares7.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/populares8.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/populares9.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <button role="button" id="d-3" class="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="js/myscript.js"></script>
+    <script src="https://kit.fontawesome.com/5f23e4cc26.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
