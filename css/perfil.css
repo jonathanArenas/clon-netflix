@@ -6,9 +6,7 @@ body{
 }
 /*--------- Contenedor para el header y pelicula principal---------- */
 
-.banner{
-    position: relative;
-}
+
 
 header{
     top: 0px;
@@ -37,13 +35,27 @@ header ul li{
     font-size: 14px;
 }
 
-header a{
+/* ---- ----- ----- primer menu ----- ----- ----- */
+
+header .navigation-menu{
+    display: none;
+}
+
+header .navigation-menu a,
+header .navigation-tap a{
     color: #e5e5e5;
     text-decoration: none;
 }
 
- header a:hover{
+header .navigation-menu a:hover,
+header .navigation-tap a:hover{
     color: #b3b3b3;
+}
+
+header .navigation-menu a.active,
+header .navigation-tap a.active{
+    color: #fff;
+    font-weight: 600;
 }
 
 .secondary-navigation{
@@ -54,6 +66,8 @@ header a{
     top: 0;
     height: 100%;
 }
+
+/* ---- ----- ----- sefundo menu ----- ----- ----- */
 
 .secondary-navigation .nav-element button{
     display: inline-block;
@@ -77,14 +91,24 @@ header a{
 }
 
 .secondary-navigation .nav-element .perfil-box{
+    display: flex;
     width: 100%;
+    height: 40px;
+    color: #fff;
 }
 
 
 .secondary-navigation .nav-element .perfil-box img{
-    width: 30px;
-
+    max-width: 100%;
+    border-radius: 5px;
+    margin-right: 10px;
+    
 }
+.secondary-navigation .nav-element .perfil-box span{
+    align-self: center;
+}
+
+
 
 .pelicula-principal{
     background: linear-gradient(0deg, rgba(20,20,20,1) 5%, rgba(11,11,11,0.10407913165266103) 50%, rgba(0,0,0,0) 100%), url("../img/pelicula-principal.webp");
@@ -93,7 +117,6 @@ header a{
     height: 50vw;
     background-size: cover;
     z-index: 0;
-
     font-size: 16px;
     color: #fff;
     display: flex;
@@ -102,12 +125,13 @@ header a{
 
 #content-media{
     position: relative;
-    top: -10vw;
+    top: -9vw;
 }
 
 .pelicula-principal .contenedor{
+    
     width: 35%;
-    margin: 0 auto  6.2em 4vw;
+    margin-left: 4vw;
 }
 
 .pelicula-principal .contenedor .title-pelicula-principal{
@@ -124,7 +148,7 @@ header a{
 }
 
 .pelicula-principal .boton{
-    padding: 1vw 2vw 1vw 2.4vw;
+    padding: .75vw 2vw .75vw 2.4vw;
     margin-right: 1vw;
     margin-bottom: 1vw;
     cursor: pointer;
@@ -274,23 +298,19 @@ header a{
 
 
 
+/* ---- ----- ----- responsive ----- ----- ----- */
 
-
-@media screen and (min-width:950px) {
-    .banner header{
+@media screen and (max-width:950px) {
+    header{
         height: 68px;
     }
-}
-
-@media screen and (max-width:840px) {
-
     .contenedor-peliculas .contenedor-carousel .carousel .pelicula{
-        min-width: 35%;
+        min-width: 25%;
     }
 
     .contenedor-peliculas .contenedor-principal .flecha-izquierda,
     .contenedor-peliculas .contenedor-principal .flecha-derecha{
-        width: 20px;
+        width: 25px;
     }
 
     .contenedor-titulo-indicadores h3{
@@ -301,6 +321,42 @@ header a{
         font-size: 1.2vw;
     }
 
+}
+
+@media screen and (max-width:850px){
+    header{
+        height: 41px;
+    }
+    header .navigation-menu{
+        display: block;
+    }
+    header .navigation-tap{
+        display: none;
+    }
+    .search{
+        font-size: .8em;
+    }
+    
+    .notifications{
+        font-size: .9em;
+    }
+
+    .secondary-navigation .nav-element .perfil-box{
+        height: 25px;
+    }
+
+    .secondary-navigation .nav-element .perfil-box span{
+        display: none;
+    }
+    
+    .contenedor-peliculas .contenedor-carousel .carousel .pelicula{
+        min-width: 35%;
+    }
+
+    .contenedor-peliculas .contenedor-principal .flecha-izquierda,
+    .contenedor-peliculas .contenedor-principal .flecha-derecha{
+        width: 20px;
+    }
 }
 
 
